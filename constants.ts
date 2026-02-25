@@ -110,7 +110,7 @@ export const TRANSLATIONS = {
     danger_zone: "Zone de Danger",
     clear_data: "EFFACER TOUT",
     width: "Laize (mm)",
-    circumference: "Copé (mm)",
+    circumference: "Coupe (mm)",
     quantity: "Quantité (Plaques)",
     price_m2: "Prix au m² (DH)",
     results: "Résultats de l'estimation",

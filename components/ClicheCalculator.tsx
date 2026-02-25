@@ -19,14 +19,14 @@ export const ClicheCalculator: React.FC<ClicheCalculatorProps> = ({ config }) =>
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
     if (laize < 100 || laize > 3000) newErrors.laize = config.language === 'fr' ? "La Laize doit être comprise entre 100 et 3000 mm." : "Width must be between 100 and 3000 mm.";
-    if (coupe < 100 || coupe > 3000) newErrors.coupe = config.language === 'fr' ? "Le Coupé doit être compris entre 100 et 3000 mm." : "Circumference must be between 100 and 3000 mm.";
+    if (cope < 100 || cope > 3000) newErrors.cope = config.language === 'fr' ? "La Coupe doit être comprise entre 100 et 3000 mm." : "Circumference must be between 100 and 3000 mm.";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const results = useMemo(() => {
     const laizeM = laize / 1000;
-    const copeM = coupe / 1000;
+    const copeM = cope / 1000;
     const areaPerPlate = laizeM * copeM;
     const totalArea = areaPerPlate * quantity;
     const totalCost = totalArea * pricePerM2;
